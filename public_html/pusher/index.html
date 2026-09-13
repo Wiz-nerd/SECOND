@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+  <title>Pusher Test</title>
+  <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+  <script src="/assets/js/jquery.min.js"></script>
+  <script>
+    var pusher=new Pusher('3dc76a3eb80033edcef5',{cluster:'us2'});var channel=pusher.subscribe('my-channel');channel.bind('my-event',function(data){$("#msgs").append("<div id=\"msg\">"+data.message+"</div>")});$(function(){$("#es").submit(function(event){event.preventDefault();$.post("/pusher/index.php",{msg:$("#tesd").val()}).done(function(resp){$("#tesd").val("")})})})
+  </script>
+</head>
+<body>
+  <h1>Pusher Test</h1>
+  <p>
+    Try publishing an event to channel <code>my-channel</code>
+    with event name <code>my-event</code>.
+  </p>
+  <div id="msgs"></div>
+  <form method="post" id="es">
+    <input id="tesd">
+  </form>
+</body>

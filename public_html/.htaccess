@@ -1,0 +1,29 @@
+Options -Indexes
+php_value display_errors 1
+ErrorDocument 403 /error.php?code=403
+ErrorDocument 404 /error.php?code=404
+ErrorDocument 500 /error.php?code=500
+RewriteEngine On
+#RewriteRule ^forums/(.*)$ ./forums/?id=$1
+RewriteRule ^forums/newpost/(.*)$ ./forums/newpost.php?id=$1
+RewriteRule ^forums/thread/(.*)$ ./forums/thread.php?id=$1
+RewriteRule ^error/code/(.*)$ ./error.php?code=$1
+RewriteRule ^profile/(.*)$ ./profile.php?username=$1
+RewriteRule ^shop/item/(.*)$ ./shop/item.php?id=$1
+RewriteRule ^clans/clan/(.*)$ ./clans/clan.php?id=$1
+RewriteRule ^messages/send/(.*)$ ./messages/send.php?id=$1
+RewriteRule ^messages/view/(.*)$ ./messages/view.php?id=$1
+RewriteRule ^admin/ban/(.*)$ ./admin/ban.php?id=$1
+RewriteRule ^clans/view/(.*)$ ./clans/view.php?id=$1
+RewriteRule ^clans/edit/(.*)$ ./clans/edit.php?id=$1
+RewriteRule ^games/view/(.*)$ ./games/view.php?id=$1
+RewriteRule ^games/edit/(.*)$ ./games/edit.php?id=$1
+RewriteRule ^discord/ ./discord.php
+RewriteRule ^badges/ ./badges.php
+RewriteRule ^logout/ ./logout.php
+RewriteRule ^twitter/ ./twitter.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+#RewriteCond %{HTTPS} !=on
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE] 

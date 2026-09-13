@@ -1,0 +1,60 @@
+body {
+    /*Line 3 hides stuff below the screen:*/
+    overflow:hidden;
+    background-image: url("https://images-ext-2.discordapp.net/external/NsqkLeWCIinPatqaUNTRmpcPC5E2KtjiHQc8b0F_vQc/https/ak.picdn.net/shutterstock/videos/1011465887/thumb/1.jpg");
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.player {
+    position:absolute;
+    background-image: url("https://media.discordapp.net/attachments/761307566071742497/801581691339800607/unknown.png");
+    width:122px;
+    height:274px;
+    margin-bottom: 5%;
+}
+
+/*You can remove lines 13-19 when you start. This was just for a demo*/
+#demo_obstacle {
+    position: absolute;
+    background-color:green;
+    width:150%;
+    height:100%;
+    margin-left: -5%;
+}
+
+.chat {
+ background:black;
+ opacity:0.5;
+ border-bottom-left-radius:10px;
+ border-bottom-right-radius:10px;
+ border:none;
+ padding:10px;
+ position:absolute;
+ width:30vw;
+ height:15vw;
+ overflow:auto;
+ word-wrap:break-word;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius:10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #222;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #111;
+}
+
+.chatInput {
+  
+}
